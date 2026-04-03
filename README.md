@@ -312,4 +312,7 @@ rm -rf ~/.claude/memory/global
 
 ## 许可证
 
+## 社区
+https://linux.do/
+
 MIT
