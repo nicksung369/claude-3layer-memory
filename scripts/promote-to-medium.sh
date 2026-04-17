@@ -91,7 +91,7 @@ if [ ! -f "${MEDIUM_TERM_FILE}" ] || grep -q "No entries yet" "${MEDIUM_TERM_FIL
     } > "${MEDIUM_TERM_FILE}"
 else
     # Update timestamp in header
-    sed -i "s/^> Last updated:.*/> Last updated: ${TIMESTAMP}/" "${MEDIUM_TERM_FILE}"
+    sed -i.bak "s/^> Last updated:.*/> Last updated: ${TIMESTAMP}/" "${MEDIUM_TERM_FILE}" && rm -f "${MEDIUM_TERM_FILE}.bak"
 
     # Append new digest
     {

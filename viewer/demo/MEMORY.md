@@ -1,0 +1,7 @@
+- [User Profile — Jamie](user_profile.md) — backend engineer, payments domain owner
+- [Integration tests must hit a real database](feedback_tests_real_db.md) — no mocked DBs; prior prod-divergence incident
+- [Terse PR descriptions, no trailing summary](feedback_pr_style.md) — drop the end-of-response recap
+- [Payments idempotency rewrite](project_payments_rewrite.md) — compliance-driven webhook dedup rewrite
+- [Mobile merge freeze 2026-04-16](project_mobile_freeze.md) — iOS release branch cut, post-freeze PRs flagged
+- [On-call latency dashboard](reference_grafana.md) — grafana.internal/d/api-latency, pages at p99 > 800ms
+- [Linear project PAY](reference_linear.md) — payments bugs/incidents tracked here

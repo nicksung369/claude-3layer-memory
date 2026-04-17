@@ -80,7 +80,7 @@ if [ ! -f "${LONG_TERM_FILE}" ] || grep -q "No entries yet" "${LONG_TERM_FILE}" 
     } > "${LONG_TERM_FILE}"
 else
     # Update timestamp
-    sed -i "s/^> Last updated:.*/> Last updated: ${TIMESTAMP}/" "${LONG_TERM_FILE}"
+    sed -i.bak "s/^> Last updated:.*/> Last updated: ${TIMESTAMP}/" "${LONG_TERM_FILE}" && rm -f "${LONG_TERM_FILE}.bak"
 
     # Append
     {

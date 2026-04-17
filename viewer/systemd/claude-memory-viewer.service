@@ -1,0 +1,15 @@
+[Unit]
+Description=claude-3layer-memory viewer (localhost:37777)
+After=network.target
+
+[Service]
+Type=simple
+# %h expands to the user's $HOME under a --user unit.
+ExecStart=/usr/bin/env python3 %h/.claude/scripts/memory-viewer/server.py
+Restart=on-failure
+RestartSec=5
+StandardOutput=append:%h/.claude/memory/global/viewer.log
+StandardError=append:%h/.claude/memory/global/viewer.log
+
+[Install]
+WantedBy=default.target

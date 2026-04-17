@@ -1,0 +1,13 @@
+# Normalize text files to LF — matters for .sh in particular, since CRLF
+# shebangs and `case ... in\r` break on Linux/macOS.
+*.sh   text eol=lf
+*.py   text eol=lf
+*.js   text eol=lf
+*.md   text
+*.json text
+*.yml  text
+*.yaml text
+
+# Binary assets — never touch
+*.png binary
+*.gif binary
